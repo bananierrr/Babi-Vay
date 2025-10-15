@@ -9,6 +9,7 @@ body {
     line-height: 1.6;
     color: #2c3e50;
     overflow-x: hidden;
+    background: linear-gradient(135deg, #f5f1e8 0%, #e8dcc8 100%);
 }
 
 .hero {
@@ -21,6 +22,7 @@ body {
     color: white;
     position: relative;
     overflow: hidden;
+    border-bottom: 6px solid #1a1a1a;
 }
 
 .hero::before {
@@ -30,13 +32,19 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="lavender" patternUnits="userSpaceOnUse" width="20" height="20"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23lavender)"/></svg>');
-    animation: float 20s ease-in-out infinite;
+    background: url('images/hero-background.jpg') center/cover;
+    background-attachment: fixed;
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
+    0%, 100% { 
+        transform: translateY(0px); 
+        box-shadow: 0 20px 60px rgba(0,0,0,0.2), inset -20px -20px 40px rgba(0,0,0,0.1);
+    }
+    50% { 
+        transform: translateY(-30px);
+        box-shadow: 0 40px 80px rgba(0,0,0,0.25), inset -20px -20px 40px rgba(0,0,0,0.1);
+    }
 }
 
 .hero-content {
@@ -92,6 +100,17 @@ body {
 
 .section {
     padding: 80px 0;
+    position: relative;
+}
+
+.section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #1a1a1a 20%, #1a1a1a 80%, transparent);
 }
 
 .container {
@@ -122,7 +141,7 @@ body {
 
 /* Gallery Section */
 .gallery {
-    background: #f8f9fa;
+    background: linear-gradient(135deg, rgba(101, 67, 33, 0.08) 0%, rgba(139, 69, 19, 0.08) 100%);
 }
 
 .photo-grid {
@@ -196,6 +215,18 @@ body {
     border-radius: 10px;
 }
 
+.photo-counter {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    background: rgba(0,0,0,0.7);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
 .close {
     position: absolute;
     top: 15px;
@@ -242,12 +273,13 @@ body {
 
 /* Pricing Section */
 .pricing {
-    background: white;
+    background: linear-gradient(135deg, rgba(101, 67, 33, 0.05) 0%, rgba(139, 69, 19, 0.05) 100%);
 }
 
 .pricing-cards {
     display: flex;
     justify-content: center;
+    gap: 3rem;
     margin-top: 2rem;
 }
 
@@ -258,8 +290,13 @@ body {
     text-align: center;
     box-shadow: 0 15px 40px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
-    border: 2px solid transparent;
+    border: 3px solid #1a1a1a;
     max-width: 400px;
+    animation: float 4s ease-in-out infinite;
+}
+
+.pricing-card:nth-child(2) {
+    animation-delay: 0.5s;
 }
 
 .pricing-card:hover {
@@ -305,7 +342,7 @@ body {
 
 /* Services Section */
 .services {
-    background: #f8f9fa;
+    background: linear-gradient(135deg, rgba(101, 67, 33, 0.08) 0%, rgba(139, 69, 19, 0.08) 100%);
     color: #2c3e50;
 }
 
@@ -339,7 +376,7 @@ body {
 
 /* Contact Section */
 .contact {
-    background: white;
+    background: linear-gradient(135deg, rgba(101, 67, 33, 0.08) 0%, rgba(139, 69, 19, 0.08) 100%);
     color: #2c3e50;
 }
 
@@ -371,10 +408,11 @@ body {
 }
 
 .contact-form {
-    background: #f8f9fa;
+    background: white;
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 3px solid #1a1a1a;
 }
 
 .form-group {
@@ -466,6 +504,7 @@ body {
     color: white;
     text-align: center;
     padding: 40px 0;
+    border-top: 6px solid #1a1a1a;
 }
 
 /* Responsive */
@@ -497,11 +536,12 @@ html {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255,255,255,0.95);
+    background: #1a252f;
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 1rem 0;
     transition: all 0.3s ease;
+    border-bottom: 3px solid #000;
 }
 
 .nav-container {
@@ -516,7 +556,7 @@ html {
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #2c3e50;
+    color: white;
 }
 
 .nav-links {
@@ -527,7 +567,7 @@ html {
 
 .nav-links a {
     text-decoration: none;
-    color: #2c3e50;
+    color: white;
     transition: color 0.3s ease;
 }
 
