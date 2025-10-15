@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Villa Méditerranée - Airbnb Sud de la France</title>
+    <title>Le Chalet des Cépages - Airbnb dans le Sud de la France</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-container">
-            <div class="logo">🏖️ Villa Méditerranée</div>
+            <div class="logo">🏖️ Le Chalet des Cépages</div>
             <ul class="nav-links">
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#galerie">Galerie</a></li>
@@ -24,7 +24,7 @@
     <!-- Hero Section -->
     <section id="accueil" class="hero">
         <div class="hero-content">
-            <h1>Villa Méditerranée</h1>
+            <h1>Le Chalet des Cépages</h1>
             <p>Votre évasion de rêve dans le Sud de la France</p>
             <a href="#contact" class="cta-button">Réserver Maintenant</a>
         </div>
@@ -33,12 +33,12 @@
     <!-- Gallery Section -->
     <section id="galerie" class="section gallery">
         <div class="container">
-            <h2 class="section-title">Découvrez Votre Refuge</h2>
+            <h2 class="section-title">Découvrez Votre Chalet</h2>
             <div class="photo-grid">
                 <div class="photo-item" onclick="openModal();currentSlide(1)">
                     <img src="images/villa-exterior.jpg" alt="Extérieur de la Villa">
                     <div class="photo-overlay">
-                        <h3>Extérieur de la Villa</h3>
+                        <h3>Extérieur du Chalet</h3>
                         <p>Cliquez pour voir plus de photos</p>
                     </div>
                 </div>
@@ -97,18 +97,33 @@
             <h2 class="section-title">Nos Tarifs</h2>
             <div class="pricing-cards">
                 <div class="pricing-card">
-                    <h3>Villa Méditerranée</h3>
+                    <h3>Le Chalet des Cépages</h3>
                     <div class="price">180€</div>
                     <div class="price-period">par nuit</div>
                     <ul class="features">
-                        <li>Villa complète (jusqu'à 6 personnes)</li>
-                        <li>Piscine privée</li>
-                        <li>3 chambres, 2 salles de bain</li>
+                        <li>Chalet complet (Seul ou en amoureux)</li>
+                        <li>Jacuzzi privée</li>
+                        <li>1 chambre de luxe avec salle de bain</li>
                         <li>Cuisine équipée</li>
-                        <li>Terrasse avec vue panoramique</li>
+                        <li>A deux pas des vignes et de la nature</li>
                         <li>Wi-Fi gratuit</li>
                         <li>Parking privé inclus</li>
                         <li>Linge de maison fourni</li>
+                    </ul>
+                </div>
+                <div class="pricing-card">
+                    <h3>Suite Prestige</h3>
+                    <div class="price">250€</div>
+                    <div class="price-period">par nuit</div>
+                    <ul class="features">
+                        <li>Suite premium avec vue panoramique</li>
+                        <li>Spa privé avec sauna</li>
+                        <li>2 chambres spacieuses avec salle de bain</li>
+                        <li>Cuisine gastronomique</li>
+                        <li>Terrasse privative avec accès au jardin</li>
+                        <li>Wi-Fi haute vitesse</li>
+                        <li>Service de conciergerie 24/24</li>
+                        <li>Petit-déjeuner gourmet inclus</li>
                     </ul>
                 </div>
             </div>
@@ -188,7 +203,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Villa Méditerranée. Tous droits réservés.</p>
+            <p>&copy; 2025 Le Chalet des Cépages. Tous droits réservés.</p>
         </div>
     </footer>
 
@@ -265,14 +280,12 @@
             });
         });
 
-        // Add scroll effect to navigation
+        // Add scroll effect to navigation - CORRIGÉ
         window.addEventListener('scroll', function() {
             const nav = document.querySelector('.nav');
             if (window.scrollY > 100) {
-                nav.style.background = 'rgba(255,255,255,0.98)';
-                nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+                nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.3)';
             } else {
-                nav.style.background = 'rgba(255,255,255,0.95)';
                 nav.style.boxShadow = 'none';
             }
         });
